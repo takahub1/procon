@@ -2,13 +2,13 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: cpp アクティブなファイルのビルド",
-            "command": "/usr/bin/cpp",
+            "label": "C/C++: g++ アクティブなファイルのビルド",
+            "command": "/usr/bin/g++",
             "args": [
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
