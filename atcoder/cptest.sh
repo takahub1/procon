@@ -4,6 +4,7 @@
 problem_name=$1
 test_dir=test/${problem_name%_*}/${problem_name##*_}
 base_url=${problem_name%_*}
+cd `dirname $0`
 
 # make test directory
 if [ ! -e ${test_dir} ]; then
@@ -11,3 +12,4 @@ if [ ! -e ${test_dir} ]; then
 fi
 
 oj test -c "problems/${problem_name%_*}/${problem_name##*_}/a.out" -d ${test_dir} -N
+rm problems/${problem_name%_*}/${problem_name##*_}/a.out
